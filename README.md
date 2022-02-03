@@ -18,11 +18,6 @@ A package for masked text field for formet your text and good UI, so if you want
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
 Add the dependency in pubsec.yaml file.
 
 ```
