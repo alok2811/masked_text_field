@@ -1,7 +1,7 @@
 name: masked_text_field
-description: A new Flutter project.
+description: A package for masked text field for formet your text and good UI, so if you want a mask for phone number, or IP address or any kind of formate. Use this package.
 version: 0.0.1
-homepage:
+homepage: https://github.com/alok2811/masked_text_field
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
