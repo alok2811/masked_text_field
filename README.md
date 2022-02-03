@@ -14,7 +14,7 @@
 
 A package for masked text field for formet your text and good UI, so if you want a mask for phone number, or IP address or any kind of formate. Use this package.
 <br>
-![Image](https://github.com/alok2811/flutter_social_button/blob/master/screenshots/phone_screen.png)
+![Image](https://github.com/alok2811/masked_text_field/blob/master/screenshots/example.gif)
 
 ## Getting started
 
