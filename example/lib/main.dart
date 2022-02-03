@@ -30,7 +30,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   var ipController = TextEditingController();
   var dateController = TextEditingController();
   var phoneController = TextEditingController();
@@ -48,13 +47,13 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text('Enter IP Address'),
-            const SizedBox(height: 5,),
+            const SizedBox(
+              height: 5,
+            ),
             MaskedTextField(
               textFieldController: ipController,
               inputDecoration: const InputDecoration(
-                hintText: '192.192.192.192',
-                  counterText: ""
-              ),
+                  hintText: '192.192.192.192', counterText: ""),
               autofocus: true,
               mask: 'xxx.xxx.xxx.xxx',
               maxLength: 15,
@@ -63,15 +62,17 @@ class _HomePageState extends State<HomePage> {
                 print(value);
               },
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             const Text('Enter Date'),
-            const SizedBox(height: 5,),
+            const SizedBox(
+              height: 5,
+            ),
             MaskedTextField(
               textFieldController: dateController,
               inputDecoration: const InputDecoration(
-                  hintText: 'DD/MM/YYYY',
-                  counterText: ""
-              ),
+                  hintText: 'DD/MM/YYYY', counterText: ""),
               autofocus: true,
               mask: 'xx/xx/xxxx',
               maxLength: 10,
@@ -80,14 +81,18 @@ class _HomePageState extends State<HomePage> {
                 print(value);
               },
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             const Text('Enter Phone Number'),
-            const SizedBox(height: 5,),
+            const SizedBox(
+              height: 5,
+            ),
             MaskedTextField(
               textFieldController: phoneController,
               inputDecoration: const InputDecoration(
-                  hintText: '98765-43210',
-                  counterText: "",
+                hintText: '98765-43210',
+                counterText: "",
                 prefixText: '+91 ',
               ),
               autofocus: true,
@@ -104,5 +109,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-

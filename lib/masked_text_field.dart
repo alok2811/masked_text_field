@@ -15,15 +15,17 @@ class MaskedTextField extends StatelessWidget {
 
   final ValueChanged<String> onChange;
 
-  const MaskedTextField({Key? key,
-    required this.mask,
-    this.escapeCharacter = "x",
-    required this.textFieldController,
-    this.maxLength = 100,
-    this.keyboardType = TextInputType.text,
-    this.inputDecoration = const InputDecoration(),
-    this.autofocus = false,
-    required this.onChange}) : super(key: key);
+  const MaskedTextField(
+      {Key? key,
+      required this.mask,
+      this.escapeCharacter = "x",
+      required this.textFieldController,
+      this.maxLength = 100,
+      this.keyboardType = TextInputType.text,
+      this.inputDecoration = const InputDecoration(),
+      this.autofocus = false,
+      required this.onChange})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +41,8 @@ class MaskedTextField extends StatelessWidget {
         // its deleting text
         if (text.length < lastTextSize) {
           if (mask[text.length] != escapeCharacter) {
-            textFieldController.selection =
-            TextSelection.fromPosition(TextPosition(
-                offset: textFieldController.text.length));
+            textFieldController.selection = TextSelection.fromPosition(
+                TextPosition(offset: textFieldController.text.length));
           }
         } else {
           // its typing
@@ -55,7 +56,7 @@ class MaskedTextField extends StatelessWidget {
 
             if (mask[position] != escapeCharacter) {
               textFieldController.text =
-              "${textFieldController.text}${mask[position]}";
+                  "${textFieldController.text}${mask[position]}";
             }
           }
 
@@ -64,16 +65,15 @@ class MaskedTextField extends StatelessWidget {
           // as IOS bugs if you simply put it in the end
           if (textFieldController.selection.start <
               textFieldController.text.length) {
-            textFieldController.selection =
-            TextSelection.fromPosition(TextPosition(
-                offset: textFieldController.text.length));
+            textFieldController.selection = TextSelection.fromPosition(
+                TextPosition(offset: textFieldController.text.length));
           }
         }
 
         // update cursor position
         lastTextSize = textFieldController.text.length;
 
- onChange(textFieldController.text);
+        onChange(textFieldController.text);
       },
     );
   }
