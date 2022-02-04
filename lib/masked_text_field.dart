@@ -8,7 +8,6 @@ library masked_text_field;
 * Zip code AND Many other things
 */
 
-
 import 'package:flutter/material.dart';
 
 class MaskedTextField extends StatelessWidget {
