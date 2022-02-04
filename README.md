@@ -12,7 +12,7 @@
 
 ## Features
 
-A package for masked text field for formet your text and good UI, so if you want a mask for phone number, or IP address or any kind of formate. Use this package.
+A package for masked text field for format your text (eg. Date, phone number, IP address etc.), so if you want a mask for phone number, or IP address or any kind of format. Use this package.
 <br>
 ![Image](https://github.com/alok2811/masked_text_field/blob/master/screenshots/example.gif)
 
@@ -51,7 +51,9 @@ MaskedTextField
     maxLength: 15,
     keyboardType: TextInputType.number,
     inputDecoration: new InputDecoration(
-    hintText: "192.192.192.192", labelText: "IP Address"),
+    hintText: "192.192.192.192", 
+    counterText: "",
+    labelText: "IP Address"),
 );
 
 ```
@@ -74,7 +76,9 @@ MaskedTextField
     maxLength: 15,
     keyboardType: TextInputType.number,
     inputDecoration: new InputDecoration(
-    hintText: "192.192.192.192", labelText: "IP Address"),
+    counterText: "",
+    hintText: "192.192.192.192", 
+    labelText: "IP Address"),
 );
 
 ```
